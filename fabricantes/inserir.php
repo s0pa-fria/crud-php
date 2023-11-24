@@ -12,7 +12,7 @@
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 
         // Chamando a função e passando os dados de conexão e o nome digitado
-        inserirFabricante($conexao, $nome);
+        inserirFabricantes($conexao, $nome);
 
         // Redirecionamento (Nada a ver com a Tag do HTML)
         header("location:listar.php");

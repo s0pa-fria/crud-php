@@ -15,14 +15,14 @@
                     produtos.descricao,
                     produtos.preco,
                     produtos.quantidade,
-                    fabricantes.nomes AS fabricante
+                    fabricantes.nome AS fabricante
                 FROM produtos INNER JOIN fabricantes
                 ON produtos.fabricante_id = fabricantes.id
                 ORDER BY produto";
 
             try {
                 // preparação do comando
-                $cosulta = $conexao->prepare($sql);
+                $consulta = $conexao->prepare($sql);
 
                 // Execução do comando
                 $consulta->execute();
